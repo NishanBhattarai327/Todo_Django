@@ -1,0 +1,15 @@
+{% extends "Layout.html" %}
+
+{% block title %}
+Todo Create
+{% endblock %}
+
+{% block create_todo %}active{% endblock %}
+
+{% block content %}
+<form method='post'>
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary" type="submit">Create</button>
+</form>
+{% endblock %}
